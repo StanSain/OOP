@@ -42,10 +42,27 @@ public class Juego {
     n = leer.nextInt();
     }
    } 
-    
+
+//
  
+public boolean Comparo(int n2){
+    boolean iguales = false;
+       if (n2 == n){
+           iguales = true;
+       }     
+            return iguales;
+} 
     
-    
+ public String Valor(int n2){
+     String numero = "son iguales";
+     if (n2 > n){
+         numero = "mas alto";
+     }
+     if (n2 < n){
+         numero = "mas bajo";
+     }
+     return numero;
+ }   
     
     
 }

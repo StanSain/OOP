@@ -18,22 +18,35 @@ public class Juegos {
         Scanner leer = new Scanner(System.in);
         Juego j1 = new Juego();//le jugador uno elije un numero
         Juego j2 = new Juego();
+        boolean sigue = true;
+        int contador = 0;
+                    j1.Elijo();
+            int nj1;
+            nj1 = j1.getN();
+//        System.out.println(nj1)
+        
+        while (sigue == true) {
+;
 
-        j1.Elijo();
-        int nj1;
-        nj1 = j1.getN();
-        System.out.println(nj1);
-
-        int nj2;
-        System.out.println("jugador 2 ingresa numero ");
-        nj2 = leer.nextInt();
-       while (nj2 <= 0 || nj2 > 10) {
+            int nj2;
             System.out.println("jugador 2 ingresa numero ");
             nj2 = leer.nextInt();
+            while (nj2 <= 0 || nj2 > 10) {
+                System.out.println("jugador 2 ingresa numero ");
+                nj2 = leer.nextInt();
+            }
+
+            System.out.println("son iguales " + j1.Comparo(nj2));
+            if (j1.Comparo(nj2)==true){
+                sigue = false;
+            }
+            System.out.println("tu numero es " + j1.Valor(nj2));
+            contador++;
+if (contador ==3){
+    sigue = false;
+    
+}
         }
-       
-       
-       
 
     }
 
